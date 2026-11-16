@@ -10,7 +10,12 @@ const historicalHelpers = [
 ];
 
 const versions = [
-  { version: "重写版 0.1.0", artifact: rebuiltArtifact, helpers: [rebuiltHelper] },
+  { version: "重写版 0.2.0", artifact: rebuiltArtifact, helpers: [rebuiltHelper], strictTriggerLimits: true },
+  {
+    version: "重写版 0.1.0",
+    artifact: require("../artifacts/Rebuilt010BaseSwapExecutor.json"),
+    helpers: [require("../artifacts/Rebuilt010ProtocolQuoteHelper.json")]
+  },
   { version: "0.7.0", artifact: require("../artifacts/BaseSwapExecutor.json"), helpers: historicalHelpers },
   { version: "0.6.2", artifact: require("../artifacts/Release062BaseSwapExecutor.json"), helpers: historicalHelpers },
   { version: "0.6.1", artifact: require("../artifacts/Release061BaseSwapExecutor.json"), helpers: historicalHelpers },
